@@ -1,9 +1,8 @@
 from flask import Flask
-from .views import home,about
+from content import blueprint
 def create_app():
   app=Flask('website')
-  app.register_blueprint(home,url_prefix='/')
-  app.register_blueprint(about,url_prefix='/about')
+  app.register_blueprint(blueprint,url_prefix='/')
   return app
   
   
