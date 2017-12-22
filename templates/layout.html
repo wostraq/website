@@ -70,17 +70,24 @@
 
            <!-- Sidebar Links -->
            <ul class="list-unstyled components">
-              {{navitem('home.index','Home')}}
-              {{navitem('home.about','About')}}
-              {{navmenu('home.pages','Pages')}}
-                    {{navitem('home.pages_1','Page1')}}
-                    {{navitem('home.pages_2','Page2')}}
-                    {{navitem('home.pages_3','Page3')}}
+              {{navitem('content.index','Home')}}
+              {{navmenu('content.about','About')}}
+                    {{navitem('content.about_membership','Membership')}}
+                    {{navitem('content.about_local','Local leads')}}
+                    {{navitem('content.about_committee','Committee')}}
                 </ul>
 
-              <li><a href="#">Portfolio</a></li>
-              <li><a href="#">Contact</a></li>
+              {{navmenu('content.projects','Projects')}}
+                    {{navitem('content.projects_previous','Projects')}}
+                    {{navitem('content.projects_propose','Propose a project')}}
+               </ul>
           </ul>
+     
+          <ul class="list-unstyled CTAs">
+             <li><a href="http://redcap.wostraq.net" class="download">Access the data entry tool</a></li>
+             <li><a href="http://forums.wostraq.net" class="download">Access the members area</a></li>
+          </ul>
+
           </nav>
 
            <!-- Page Content -->
