@@ -1,28 +1,30 @@
-from . import content,create_app
+from . import create_app
 import pytest
 
-@pytest.fixture(scope="module",autouse=True)
-def appcontext():
+@pytest.fixture(scope="module")
+def client():
   app=create_app()
   with app.test_client() as c:
-    yield
+    yield c
 
-def test_home():
-  content.home()
+
+def test_home(client):
+  client.get('/')
   
-def test_about_membership():
-  content.about_membership()
+def test_about_membership(client):
+  client.get('/about/membership')
 
-def test_about_local():
-  content.about_local()
-
-def test_about_committee():
-  content.about_committe()
+def test_about_local(client):
+  client.get('/about/local')
   
-def test_projects_previous():
-  content.projects_previous()
+def test_about_committee(client):
+  client.get('/about/committee')
+  
 
-
-def test_projects_propose():
-  content.projects_propose()
+def test_projects_previous(client):
+  client.get('/projects/previous')
+  
+def test_projects_propose(client):
+  client.get('/projects/propose')
+  
 
