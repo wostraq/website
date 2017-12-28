@@ -1,7 +1,7 @@
 from . import content,create_app
 import pytest
 
-@pytest.fixture(scope=module,autouse=True)
+@pytest.fixture(scope="module",autouse=True)
 def appcontext():
   app=create_app()
   with app.test_client() as c:
