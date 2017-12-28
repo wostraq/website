@@ -4,7 +4,6 @@ from . import content
 def test_home():
   content.home()
   
-@blueprint.route('/about/membership')
 def test_about_membership():
   content.about_membership()
 
