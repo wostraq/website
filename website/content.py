@@ -15,7 +15,7 @@ def about_local():
   return render_template('about_local.html')
 
 @blueprint.route('/about/committee')
-def about_local():
+def about_committee():
   return render_template('about_committee.html')
 
 @blueprint.route('/projects/previous')
