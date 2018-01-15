@@ -9,22 +9,21 @@ def client():
 
 
 def test_home(client):
-  client.get('/')
+  assert '200' in client.get('/').status 
   
 def test_about_membership(client):
-  client.get('/about/membership')
+  assert '200' in client.get('/about/membership').status
 
 def test_about_local(client):
-  client.get('/about/local')
+  assert '200' in client.get('/about/local').status
   
 def test_about_committee(client):
-  client.get('/about/committee')
+  assert '200' in client.get('/about/committee').status
   
 
 def test_projects_previous(client):
-  client.get('/projects/previous')
+  assert '200' in client.get('/projects/previous').status
   
 def test_projects_propose(client):
-  client.get('/projects/propose')
-  
+  assert '200' in client.get('/projects/propose').status  
 
