@@ -90,7 +90,21 @@
                      
         <!-- main forum layout -->
         <div id="content" class="flaskbb-layout">
-            
+            <div id="topnav" class="row">
+		<div class="col-xs-3">
+		    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+			    <i class="glyphicon glyphicon-align-left">Menu</i>
+		    </button>
+		</div>
+		<div class="col-xs-3">
+			<a href="{{url_for('content.home')}}">      
+			<img class="img-responsive d-block" src="{{url_for("static",filename="img/wostraqlogo.png")}}">      
+			</a>
+		</div>
+		<div class="col-xs-6"><h3>WoSTRAQ</h3></div>
+	</div>
+			
+	
 
                 <!-- Place for all the (flashed) messages -->
                 {% block messages %}
@@ -132,6 +146,10 @@
         <script>
         $(function () {
             $('[data-toggle="tooltip"]').tooltip()
+	    $('#sidebarCollapse').on('click', function () {
+               $('#sidebar').toggleClass('active');
+    });
+
         })
         </script>
         {% endblock %}
