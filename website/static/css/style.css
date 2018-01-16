@@ -166,3 +166,8 @@ a.article, a.article:hover {
         display: none;
     }
 }
+@media (min-width: 769px) {
+    #topnav {
+        display: none;
+    }
+}
