@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template
+from flask import Blueprint,render_template,redirect,request,Response
 
 blueprint = Blueprint('content',__name__)
 
@@ -29,10 +29,9 @@ def projects_propose():
 
 @blueprint.route('about/join_us')
 def join_us():
-  return redirect(
+  return redirect('https://docs.google.com/forms/d/e/1FAIpQLSeWsC7onQ0yuk95MMHhunDw4UigOu6eVtjoPApZB7R-v3czdg/viewform')
 
 from functools import wraps
-from flask import request, Response,redirect
 
 
 def check_auth(username, password):
