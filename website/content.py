@@ -27,6 +27,10 @@ def projects_previous():
 def projects_propose():
   return render_template('proposeproject.html')
 
+@blueprint.route('about/join_us')
+def join_us():
+  return redirect(
+
 from functools import wraps
 from flask import request, Response,redirect
 
