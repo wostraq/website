@@ -53,9 +53,10 @@ def requires_auth(f):
         return f(*args, **kwargs)
     return decorated
 
+@blueprint.route('data_collection')
 @requires_auth
-def secret_page():
-    return render_template('secret_page.html')
+def data_collection():
+    return redirect('https://goo.gl/forms/hF7ai0d1xzXjbnCn2')
 
 
 
