@@ -26,4 +26,37 @@ def projects_previous():
 @blueprint.route('projects/propose')
 def projects_propose():
   return render_template('proposeproject.html')
+
+from functools import wraps
+from flask import request, Response,redirect
+
+
+def check_auth(username, password):
+    """This function is called to check if a username /
+    password combination is valid.
+    """
+    return username == 'wostraq' and password == 'password'
+
+def authenticate():
+    """Sends a 401 response that enables basic auth"""
+    return Response(
+    'Could not verify your access level for that URL.\n'
+    'You have to login with proper credentials', 401,
+    {'WWW-Authenticate': 'Basic realm="Login Required"'})
+
+def requires_auth(f):
+    @wraps(f)
+    def decorated(*args, **kwargs):
+        auth = request.authorization
+        if not auth or not check_auth(auth.username, auth.password):
+            return authenticate()
+        return f(*args, **kwargs)
+    return decorated
+
+@requires_auth
+def secret_page():
+    return render_template('secret_page.html')
+
+
+
   
