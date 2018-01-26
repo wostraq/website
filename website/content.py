@@ -1,4 +1,4 @@
-from flask import Blueprint,render_template
+from flask import Blueprint,render_template,redirect,request,Response
 
 blueprint = Blueprint('content',__name__)
 
@@ -27,8 +27,11 @@ def projects_previous():
 def projects_propose():
   return render_template('proposeproject.html')
 
+@blueprint.route('about/join_us')
+def join_us():
+  return redirect('https://docs.google.com/forms/d/e/1FAIpQLSeWsC7onQ0yuk95MMHhunDw4UigOu6eVtjoPApZB7R-v3czdg/viewform')
+
 from functools import wraps
-from flask import request, Response,redirect
 
 
 def check_auth(username, password):
@@ -42,7 +45,7 @@ def authenticate():
     return Response(
     'Could not verify your access level for that URL.\n'
     'You have to login with proper credentials', 401,
-    {'WWW-Authenticate': 'Basic realm="Login Required"'})
+    {'WWW-Authenticate': 'Basic realm="Data entry forms"'})
 
 def requires_auth(f):
     @wraps(f)
