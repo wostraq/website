@@ -1,8 +1,10 @@
-from flask import Blueprint,render_template,redirect,request,Response
+from flask import Blueprint,render_template,redirect,request,Response,make_response,flash
+import json
 
 blueprint = Blueprint('content',__name__)
 
 @blueprint.route('/')
+@blueprint.route('index.html')
 def home():
   return render_template('index.html')
   
@@ -31,6 +33,10 @@ def projects_propose():
 def join_us():
   return redirect('https://docs.google.com/forms/d/e/1FAIpQLSeWsC7onQ0yuk95MMHhunDw4UigOu6eVtjoPApZB7R-v3czdg/viewform')
 
+@blueprint.route('ext/membersarea')
+def membersarea():
+  return redirect('https://forum.wostraq.net')
+
 from functools import wraps
 
 
@@ -42,9 +48,7 @@ def check_auth(username, password):
 
 def authenticate():
     """Sends a 401 response that enables basic auth"""
-    return Response(
-    'Could not verify your access level for that URL.\n'
-    'You have to login with proper credentials', 401,
+    return Response(render_template('access_denied.html'), 401,
     {'WWW-Authenticate': 'Basic realm="Data entry forms"'})
 
 def requires_auth(f):
@@ -59,8 +63,26 @@ def requires_auth(f):
 @blueprint.route('data_collection')
 @requires_auth
 def data_collection():
-    return redirect('https://goo.gl/forms/hF7ai0d1xzXjbnCn2')
+    return redirect('https://docs.google.com/forms/d/e/1FAIpQLScduKaCJBaFZKllZP8ON14aWik9ZRFG1UBMUnloZp22j-AqRw/viewform')
+
+@blueprint.route("cache.appcache")
+def appcache():
+    return "not found",404
+    cache=['/index.html',"/about/local","/about/committee","about/membership","/projects/previous","/projects/propose"]
+    cache.extend("https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css /static/css/style.css https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic https://code.jquery.com/jquery-1.12.0.min.js https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js".split())
+    fallback=["/ /unavailable"]
+    import os
+    out=["CACHE MANIFEST","#{}".format(os.path.getmtime(__file__))]
+    out.append("CACHE:")
+    out.extend(cache)
+    out.append("FALLBACK:")
+    out.extend(fallback)
+    rs=make_response("\n".join(out))
+    rs.headers["Content-Type"]="text/cache-manifest"
+    return rs
 
 
+@blueprint.route("unavailable")
+def unavailable():
+    return "Not available offline"
 
-  

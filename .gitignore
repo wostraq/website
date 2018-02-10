@@ -1,0 +1,5 @@
+*.pyc
+*config*
+*save
+.venv/
+logs/
