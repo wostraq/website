@@ -2,7 +2,7 @@ from flask import Blueprint,render_template,redirect,request,Response,make_respo
 from slackclient import SlackClient
 import json
 
-blueprint = Blueprint('content',__name__)
+blueprint = Blueprint('slack',__name__)
 
 from .config import BOT_TOKEN,SLACK_CLIENT_ID,SLACK_CLIENT_SECRET,SLACK_ADMIN_CHANNEL
 
