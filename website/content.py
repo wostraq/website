@@ -1,5 +1,5 @@
 from flask import Blueprint,render_template,redirect,request,Response,make_response,flash
-import json
+import json,csv
 
 blueprint = Blueprint('content',__name__)
 
@@ -22,7 +22,12 @@ def about_committee():
 
 @blueprint.route('projects/previous')
 def projects_previous():
-  return render_template('previousprojects.html')
+  with open("ponvcontacts.csv") as f:
+   dr=list(csv.DictReader(f))
+   names=list({r['Name'] for r in dr})
+   names.sort(key=lambda i:i.split()[-1])
+   nameslist=[(n,"\n".join(["{},{}".format(r["Role"],r["Hospital"]) for r in dr if r["Name"]==n])) for n in names]
+  return render_template('previousprojects.html', nameslist=nameslist)
 
 
 @blueprint.route('projects/propose')
@@ -86,3 +91,7 @@ def appcache():
 def unavailable():
     return "Not available offline"
 
+@blueprint.before_request
+def flashmessages():
+    for msg in request.args.getlist('flash'):
+        flash(msg)
