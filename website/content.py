@@ -20,6 +20,10 @@ def about_local():
 def about_committee():
   return render_template('about_committee.html')
 
+@blueprint.route('about/curriculum')
+def about_curriculum():
+  return render_template('about_curriculum.html')
+
 @blueprint.route('projects/previous')
 def projects_previous():
   with open("ponvcontacts.csv") as f:
