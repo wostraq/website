@@ -38,6 +38,10 @@ def projects_previous():
 def projects_propose():
   return render_template('proposeproject.html')
 
+@blueprint.route('projects/proposals')
+def projects_propose():
+  return render_template('proposals.html')
+
 @blueprint.route('about/join_us')
 def join_us():
   return redirect('https://docs.google.com/forms/d/e/1FAIpQLSeWsC7onQ0yuk95MMHhunDw4UigOu6eVtjoPApZB7R-v3czdg/viewform')
