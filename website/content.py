@@ -40,7 +40,7 @@ def projects_propose():
 
 @blueprint.route('projects/proposals')
 def projects_propose():
-  return render_template('proposals.html')
+  return render_template('projectproposals.html')
 
 @blueprint.route('about/join_us')
 def join_us():
