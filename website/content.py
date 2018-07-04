@@ -41,6 +41,9 @@ def projects_propose():
 @blueprint.route('projects/proposals')
 def projects_proposals():
   return render_template('projectproposals.html')
+@blueprint.route('projects/proposed')
+def projectpropose2():
+  return redirect('/projects/proposals')
 
 @blueprint.route('about/join_us')
 def join_us():
