@@ -54,7 +54,7 @@ def membersarea():
   return redirect('https://forum.wostraq.net')
 
 @blueprint.app_errorhandler(404)
-def error404():
+def error404(err):
   flash("Sorry, that page couldn't be found. You may be able to find what you are searching for using the menu on the left",category='error')
   return redirect('/')
 
