@@ -47,8 +47,7 @@ def projectpropose2():
 
 @blueprint.route('about/join_us')
 def join_us():
-  return redirect('https://docs.google.com/forms/d/e/1FAIpQLSeWsC7onQ0yuk95MMHhunDw4UigOu6eVtjoPApZB7R-v3czdg/viewform')
-
+  return redirect ('https://docs.google.com/forms/d/e/1FAIpQLScFpYqCUZcZCc4c42lWqfe_cp_XB5ka1-l-S4S-EDJN9sK85g/viewform')
 @blueprint.route('ext/membersarea')
 def membersarea():
   return redirect('https://forum.wostraq.net')
