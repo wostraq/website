@@ -133,6 +133,19 @@
         </div> <!-- end flaskbb-layout -->
 
         {% block javascript %}
+		<script src="https://www.gstatic.com/firebasejs/5.3.1/firebase.js"></script>
+		<script>
+		  // Initialize Firebase
+		  var config = {
+		    apiKey: "AIzaSyA26JIXzntJ3u4Et9eW4m02KLNPhq8oLNE",
+		    authDomain: "wostraq-web.firebaseapp.com",
+		    databaseURL: "https://wostraq-web.firebaseio.com",
+		    projectId: "wostraq-web",
+		    storageBucket: "",
+		    messagingSenderId: "680321474687"
+		  };
+		  firebase.initializeApp(config);
+
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <!-- Enable tooltips in all templates -->
