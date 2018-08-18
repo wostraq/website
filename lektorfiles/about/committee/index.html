@@ -1,0 +1,179 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" manifest="/cache.appcache">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WOSTRAQ - West of Scotland Trainees Research, Audit and QI network">
+        <meta name="author" content="WOSTRAQ">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+
+        <title>WoSTRAQ</title>
+
+        
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- lato font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        
+
+        
+        
+        
+
+        
+        
+        
+    </head>
+
+    <body>
+        <div class="wrapper">
+
+           <!-- Sidebar -->
+           <nav id="sidebar">
+           <!-- Sidebar Header -->
+           <div class="sidebar-header">
+              <h3><a href="/"> 
+			  <img class="img-responsive d-block" src="/static/img/wostraqlogo.png"> 
+			  </a> </h3>
+           </div>
+
+           <!-- Sidebar Links -->
+           <ul class="list-unstyled components">
+              <li class="active">
+ <a href="#aboutSubmenu" data-toggle="collapse" aria-expanded="false">About</a>
+ <ul class="collapse list-unstyled" id="aboutSubmenu">
+ 
+ <li> 
+<a href="../../about/membership/">Membership</a>
+</li>
+ 
+ <li> 
+<a href="../../about/local/">Local leads</a>
+</li>
+ 
+ <li class="active"> 
+<a href="../../about/committee/">Committee</a>
+</li>
+ 
+ </ul></li>
+
+              <li>
+ <a href="#projectsSubmenu" data-toggle="collapse" aria-expanded="false">Projects</a>
+ <ul class="collapse list-unstyled" id="projectsSubmenu">
+ 
+ <li> 
+<a href="../../projects/previous/">Projects</a>
+</li>
+ 
+ <li> 
+<a href="../../projects/propose">Propose a project</a>
+</li>
+ 
+ <li> 
+<a href="../../projects/proposals/">Proposed projects</a>
+</li>
+ 
+ </ul></li>
+
+               
+          </ul>
+     
+          <ul class="list-unstyled CTAs">
+             <li><a href="/join_us" class="download" target="join">Join WoSTRAQ</a></li>
+	     </ul>
+
+          </nav>
+
+           <!-- Page Content -->
+              
+                     
+        <!-- main forum layout -->
+        <div id="content" class="flaskbb-layout">
+            <div id="topnav" class="row">
+		<div class="col-xs-3">
+		    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+			    <i class="glyphicon glyphicon-align-left">Menu</i>
+		    </button>
+		</div>
+		<div class="col-xs-3">
+			<a href="/">      
+			<img class="img-responsive d-block" src="/static/img/wostraqlogo.png">      
+			</a>
+		</div>
+		<div class="col-xs-6"><h3>WoSTRAQ</h3></div>
+	</div>
+			
+	
+
+                <!-- the actual content block -->
+                
+<h2> Committee </h2>
+
+The organisation is led by a committee of its members:
+
+<h3> Chairperson </h3> 
+Yvonne Bramma 
+<a href="mailto:chair@wostraq.net">Contact</a><br>
+Chairs committee meetings, steers development of the organisation, communicates with RAFT
+
+<h3> Secretary </h3>
+Claire McCue
+<a href="mailto:secretary@wostraq.net">Contact</a><br>
+Records and distributes minutes for committee meetings, monitors WOSTRAQ email accounts.
+
+<h3>Database manager</h3>
+John Gardner
+<a href="mailto:db_manager@wostraq.net">Contact</a><br>
+Obtain license for use of Redcap software and server to host the database, manage the database once set up
+
+<h3>IT Lead/Webmaster</h3>
+Daniel Silcock
+<a href="mailto:webmaster@wostraq.net">Contact</a><br>
+Set up and manage WOSTRAQ website and social media accounts
+
+<h3>Trainee communication lead</h3>
+Gemma Scotland
+ <a href="mailto:traineecomms@wostraq.net">Contact</a><br>
+Communication link between trainee members and the committee
+
+<h3>Consultant communication lead</h3>
+Clare Currie
+<a href="mailto:conscomms@wostraq.net">Contact</a><br>
+Communication link between consultants and the committee
+
+
+            <!-- end container -->
+
+            
+
+        </div> <!-- end flaskbb-layout -->
+
+        
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Enable tooltips in all templates -->
+        <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+	    $('#sidebarCollapse').on('click', function () {
+               $('#sidebar').toggleClass('active');
+    });
+
+        })
+        </script>
+        
+
+        
+        
+        
+    </body>
+</html>

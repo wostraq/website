@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{%block body%}
+<!----
+<h2>Completed projects</h2>
+None yet
+<hr>
+------>
+<h2>Current proposals</h2>
+{%for child in this.children%}
+<h3>{{child.title}}</h3>
+{{child.description}}<br>
+{%endfor%}
+<hr>
+
+
+{%endblock%}

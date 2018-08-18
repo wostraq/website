@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% from "macros/blog.html" import render_blog_post %}
+{% block title %}{{ this.title }}{% endblock %}
+{% block body %}
+  <h3>{{this.title}}</h3>
+	{{this.description}}<br>
+	<hr>
+	{%for a in this.attachments.all()%}
+	  <a href="{{a|url}}">{{a.title}}</a><br>
+	{%endfor%}
+{% endblock %}

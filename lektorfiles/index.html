@@ -1,0 +1,167 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html lang="en" manifest="/cache.appcache">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WOSTRAQ - West of Scotland Trainees Research, Audit and QI network">
+        <meta name="author" content="WOSTRAQ">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+
+        <title>Welcome to WoSTRAQ!</title>
+
+        
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- lato font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        
+
+        
+        
+        
+
+        
+        
+        
+    </head>
+
+    <body>
+        <div class="wrapper">
+
+           <!-- Sidebar -->
+           <nav id="sidebar">
+           <!-- Sidebar Header -->
+           <div class="sidebar-header">
+              <h3><a href="/"> 
+			  <img class="img-responsive d-block" src="/static/img/wostraqlogo.png"> 
+			  </a> </h3>
+           </div>
+
+           <!-- Sidebar Links -->
+           <ul class="list-unstyled components">
+              <li>
+ <a href="#aboutSubmenu" data-toggle="collapse" aria-expanded="false">About</a>
+ <ul class="collapse list-unstyled" id="aboutSubmenu">
+ 
+ <li> 
+<a href="./about/membership/">Membership</a>
+</li>
+ 
+ <li> 
+<a href="./about/local/">Local leads</a>
+</li>
+ 
+ <li> 
+<a href="./about/committee/">Committee</a>
+</li>
+ 
+ </ul></li>
+
+              <li>
+ <a href="#projectsSubmenu" data-toggle="collapse" aria-expanded="false">Projects</a>
+ <ul class="collapse list-unstyled" id="projectsSubmenu">
+ 
+ <li> 
+<a href="./projects/previous/">Projects</a>
+</li>
+ 
+ <li> 
+<a href="./projects/propose">Propose a project</a>
+</li>
+ 
+ <li> 
+<a href="./projects/proposals/">Proposed projects</a>
+</li>
+ 
+ </ul></li>
+
+               
+          </ul>
+     
+          <ul class="list-unstyled CTAs">
+             <li><a href="/join_us" class="download" target="join">Join WoSTRAQ</a></li>
+	     </ul>
+
+          </nav>
+
+           <!-- Page Content -->
+              
+                     
+        <!-- main forum layout -->
+        <div id="content" class="flaskbb-layout">
+            <div id="topnav" class="row">
+		<div class="col-xs-3">
+		    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+			    <i class="glyphicon glyphicon-align-left">Menu</i>
+		    </button>
+		</div>
+		<div class="col-xs-3">
+			<a href="/">      
+			<img class="img-responsive d-block" src="/static/img/wostraqlogo.png">      
+			</a>
+		</div>
+		<div class="col-xs-6"><h3>WoSTRAQ</h3></div>
+	</div>
+			
+	
+
+                <!-- the actual content block -->
+                
+  <h2>Welcome to WoSTRAQ!</h2>
+  <p>WOSTRAQ are a group of anaesthetists in training, set up in order to facilitate collaborative, multi-centre audit and research in anaesthesia within the NHS hospitals in the West of Scotland.</p>
+<!---
+WOSTRAQ are part of the <a href="https://www.raftrainees.com/"> Research and Audit Federation of Trainees (RAFT). </a>
+--->
+
+<p>We aim:</p>
+<ul>
+<li>To establish a regional network of anaesthetic trainees to conduct multi-centre research, audit and quality improvement</li>
+<li>To improve the quality and impact of audit and quality improvement projects in the West of Scotland.</li>
+<li>To allow trainees to continue their involvement in research and audit projects as they migrate around the deanery.</li>
+<li>To build partnerships between anaesthetic departments in the West of Scotland, with the overall aim of working together towards improving the quality of patient care.</li>
+<li>To participate in national audit and research projects and to attract national funding for research and audit work.</li>
+</ul>
+<hr>
+<p>For more information please <a href="mailto:committee@wostraq.net">contact the committee</a> or read the <a href="./assets/constitution.pdf">WoSTRAQ Constitution</a></p>
+<hr>
+<div class="col-md-6">
+          <a href="https://twitter.com/wostraq" class="twitter-follow-button" data-show-count="false">Follow @WoSTRAQ on Twitter</a>
+          <a class="twitter-timeline" href="https://twitter.com/wostraq">Tweets by WoSTRAQ</a>
+          <script async="" src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+        </div>
+
+            <!-- end container -->
+
+            
+
+        </div> <!-- end flaskbb-layout -->
+
+        
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Enable tooltips in all templates -->
+        <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+	    $('#sidebarCollapse').on('click', function () {
+               $('#sidebar').toggleClass('active');
+    });
+
+        })
+        </script>
+        
+
+        
+        
+        
+    </body>
+</html>

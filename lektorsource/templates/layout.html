@@ -1,0 +1,154 @@
+
+{% macro navmenu(href,pagename,menuitems) -%}
+ <li
+ {%- if this.is_child_of(href) %} class="active"{% endif%}>
+ <a href="#{{- href.replace('/','') -}}Submenu" data-toggle="collapse" aria-expanded="false">{{pagename}}</a>
+ <ul class="collapse list-unstyled" id="{{- href.replace('/','') -}}Submenu">
+ {%for mi in menuitems%}
+ {{mi}}
+ {%endfor%}
+ </ul></li>
+{% endmacro %}
+
+{% macro navitem(href,pagename) -%}
+<li {%- if this.is_child_of(href) %} class="active"{% endif%}> 
+<a href="{{href|url}}">{{pagename}}</a>
+</li>
+{%- endmacro %}
+
+
+
+<!DOCTYPE html>
+<html lang="en" manifest="/cache.appcache">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WOSTRAQ - West of Scotland Trainees Research, Audit and QI network">
+        <meta name="author" content="WOSTRAQ">
+        <link rel="shortcut icon" href="/static/favicon.ico">
+
+        <title>{% block title %}WoSTRAQ{% endblock %}</title>
+
+        {% block stylesheets %}
+        <!-- bootstrap css -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="/static/css/style.css">
+        <!-- lato font -->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css">
+        {% endblock %}
+
+        {# for extra stylesheets. e.q. a template has to add something #}
+        {% block css %}
+        {% endblock %}
+
+        {# for various extra things #}
+        {% block head_extra %}
+        {% endblock %}
+    </head>
+
+    <body>
+        <div class="wrapper">
+
+           <!-- Sidebar -->
+           <nav id="sidebar">
+           <!-- Sidebar Header -->
+           <div class="sidebar-header">
+              <h3><a href="/"> 
+			  <img class="img-responsive d-block" src="/static/img/wostraqlogo.png"> 
+			  </a> </h3>
+           </div>
+
+           <!-- Sidebar Links -->
+           <ul class="list-unstyled components">
+              {{navmenu('/about','About',[
+                    navitem('/about/membership','Membership'),
+                    navitem('/about/local','Local leads'),
+                    navitem('/about/committee','Committee')])}}
+              {{navmenu('/projects','Projects',[
+                    navitem('/projects/previous','Projects'),
+                    navitem('/projects/propose','Propose a project'),
+					navitem('/projects/proposals','Proposed projects')])}}
+               
+          </ul>
+     
+          <ul class="list-unstyled CTAs">
+             <li><a href="/join_us" class="download" target="join">Join WoSTRAQ</a></li>
+	     </ul>
+
+          </nav>
+
+           <!-- Page Content -->
+              
+                     
+        <!-- main forum layout -->
+        <div id="content" class="flaskbb-layout">
+            <div id="topnav" class="row">
+		<div class="col-xs-3">
+		    <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+			    <i class="glyphicon glyphicon-align-left">Menu</i>
+		    </button>
+		</div>
+		<div class="col-xs-3">
+			<a href="/">      
+			<img class="img-responsive d-block" src="/static/img/wostraqlogo.png">      
+			</a>
+		</div>
+		<div class="col-xs-6"><h3>WoSTRAQ</h3></div>
+	</div>
+			
+	
+{#
+                <!-- Place for all the (flashed) messages -->
+                {% block messages %}
+                <div id="flashed-messages">
+                    {% with messages = get_flashed_messages(with_categories=True) %}
+                        {% if messages %}
+                          {% for category, message in messages %}
+                            {% if category == 'error' %}
+                             {% set icon = 'glyphicon glyphicon-exclamation-sign' %}
+                            {% elif category == 'success' %}
+                             {% set icon = 'glyphicon glyphicon-ok-sign' %}
+                            {% else %}
+                             {% set icon = 'glyphicon glyphicon-info-sign' %}
+                            {% endif %}
+                            <div class="alert alert-{{ category }}">
+                             <span class="{{ icon }}"></span>&nbsp;
+                             <button type="button" class="close" data-dismiss="alert" aria-hidden="true">&times;</button>
+                              {{ message }}
+                              </div>
+                            {% endfor %}
+                     {% endif %}
+                   {% endwith %}
+                </div>
+                {% endblock %}
+#}
+                <!-- the actual content block -->
+                {% block body %}
+                {% endblock %}
+            <!-- end container -->
+
+            
+
+        </div> <!-- end flaskbb-layout -->
+
+        {% block javascript %}
+        <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <!-- Enable tooltips in all templates -->
+        <script>
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+	    $('#sidebarCollapse').on('click', function () {
+               $('#sidebar').toggleClass('active');
+    });
+
+        })
+        </script>
+        {% endblock %}
+
+        {# for extra scripts in other templates. #}
+        {% block scripts %}
+        {% endblock %}
+    </body>
+</html>
