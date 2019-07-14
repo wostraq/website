@@ -106,11 +106,11 @@ class MyApp extends App {
           <NavMenu prefix='projects' pagename="Projects'>
             <NavItem href='projects/previous' pagename='Previous projects'/>
             <NavItem href='projects/propose' pagename='Propose a project'/>
-            <NavItem href='projects/proposals' pagename="Proposed projects'/>
+            <NavItem href='projects/proposals' pagename='Proposed projects'/>
           </NavMenu>
-          <NavMenu prefix='members' pagename="Members">
+          <NavMenu prefix='members' pagename="Members"/>
             <NavItem href='members/join' pagename="Join us"/>
-            <NavItem href='members/mydetails' pagename='My details'
+            <NavItem href='members/mydetails' pagename='My details'/>
           </NavMenu>
         </Menubar>
       </Container>
