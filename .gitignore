@@ -3,3 +3,4 @@
 *save
 .venv/
 logs/
+node_modules/
