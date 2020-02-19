@@ -1,0 +1,47 @@
+Hospital,Role,Name,Email,confirmed,email sent
+Ayr Hospital,Consultant Lead,Katrina Dick,katrina.dick@nhs.net,,
+Crosshouse Hospital,Consultant Lead,Kim Flatman,Kim.Flatman@aapct.scot.nhs.uk,y,
+Crosshouse Hospital,Local Data Collector,Ruth Clarke,ruth.clarke7@nhs.net,y,
+Crosshouse Hospital,Local Data Collector,Fiona Breckenridge,fiona.breckenridge@nhs.net,y,
+Dumfries and Galloway Royal Infirmary,Consultant Lead,Willis Peel,willis.peel@nhs.net,,
+Forth Valley Royal Hospital,Consultant Lead,Nick Crutchley,,y,
+Forth Valley Royal Hospital,Local Data Collector,Galvin Gan,galvin.gan@nhs.net,y,
+Gartnavel General Hospital,Consultant Lead,Bob Docking,robertdocking@nhs.net,y,
+Gartnavel General Hospital,Local Coordinator,Jacqueline Harkins,jacquelineharkins@nhs.net,y,
+Glasgow Royal Infirmary,Consultant Lead,Steven Young,steven.young@ggc.scot.nhs.uk,y,
+Glasgow Royal Infirmary,Local Data Collector,Roslyn Carnie,roslyncarnie@nhs.net,y,
+Glasgow Royal Infirmary,Local Data Collector (Obstetrics),Claire McCue,claire.mccue1@nhs.net,y,
+Golden Jubilee National Hospital,Consultant Lead,Ben Shelley,,,
+Hairmyres Hospital,Consultant Lead,Jane Duffty,jane.duffty@lanarkshire.scot.nhs.uk,y,
+Hairmyres Hospital,Local Data Collector,Tom Lovejoy,tomlovejoy@gmail.com,y,
+Hairmyres Hospital,Local Data Collector,Katie Donaldson,katie.donaldson@nhs.net,y
+Institute of Neurological Sciences,Local Data Collector,Peter Paisley,peter.paisley@googlemail.com,y
+Institute of Neurological Sciences,Consultant Lead,Chris Hawthorne,cwhawthorne@doctors.org.uk,y
+Inverclyde Royal Hospital,Consultant Lead,Grant Tong,grant.tong@ggc.scot.nhs.uk,y
+Inverclyde Royal Hospital,Local Data Collector,Melanie Morrison,melaniemorrison@nhs.net,y
+Monklands Hospital,Consultant Lead,Claire McIntyre,clairemcintyre@doctors.org.uk,y
+Monklands Hospital,Local Data Collector,Ruth Dunn,ruthdunn2@nhs.net,y
+Queen Elizabeth University Hospital,Consultant Lead,Bob Docking,robertdocking@nhs.net,y
+Queen Elizabeth University Hospital,Local Coordinator,Jacqueline Harkins,jacquelineharkins@nhs.net,y
+Queen Elizabeth University Hospital,Local Data Collector (Obstetrics),Sarah Smith,sarahj.smith@doctors.org.uk,y
+Queen Elizabeth University Hospital,Local Data Collector,Guy Coady,guycoady@gmail.com,y
+Royal Alexandra Hospital,Consultant Lead,Lisa Gemmel,l.gemmell@nhs.net,y
+Royal Alexandra Hospital,Local Data Collector,Arlene Connelly,arleneconnelly@hotmail.com,y
+Royal Alexandra Hospital,Local Data Collector,Michael Kerr,michaelkerr@nhs.net,y
+Royal Alexandra Hospital,Local Data Collector,Jacqualyn Fisher,jaqualynfisher@nhs.net,y
+Royal Hospital for Children,Consultant Lead,Sarah Hivey,sarah.hivey@nhs.net,
+Stobhill ACH,Consultant Lead,Steven Young,steven.young@ggc.scot.nhs.uk,
+Victoria ACH,Consultant Lead,Bob Docking,robertdocking@nhs.net,y
+Victoria ACH,Local Coordinator,Jacqueline Harkins,jacquelineharkins@nhs.net,y
+Victoria ACH,Local Data Collector,Peter Bolton,peter.bolton1@nhs.net,y
+Victoria ACH,Local Data Collector,Jennifer Reid,jreid15@nhs.net,y
+Wishaw General Hospital,Consultant Lead,Colum Slorach,Colum.Slorach@lanarkshire.scot.nhs.uk,y
+Wishaw General Hospital,Local Data Collector,Dima Nassif,dimanassif@nhs.net,y
+Wishaw General Hospital,Local Data Collector (Obstetrics),Helen French,helen.french87@gmail.com,y
+Wishaw General Hospital,Local Data Collector,James Ballantyne,jamesballantyne1@nhs.net,y
+WoSTRAQ,Committee Member and Regional Project Lead,John Gardner,johngardner@nhs.net,
+WoSTRAQ,Committee Member and Regional Organiser,Daniel Silcock,,
+WoSTRAQ,Committee Member and Regional Organiser,Claire McCue,,
+WoSTRAQ,Committee Member and Regional Organiser,Clare Currie,,
+WoSTRAQ,Committee Member and Regional Organiser,Gemma Scotland,,
+WoSTRAQ,Committee Member and Regional Organiser,Yvonne Bramma,,
