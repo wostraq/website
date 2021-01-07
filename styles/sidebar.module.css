@@ -1,0 +1,148 @@
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+.wrapper {
+  display: flex;
+  align-items: stretch;
+}
+
+.sidebar {
+  min-width: 250px;
+  max-width: 250px;
+  background: #6d7fcc;
+  color: #fff;
+  transition: all 0.3s;
+  position: relative;
+}
+.sidebar img {
+  width: 100%;
+}
+
+.sidebarHeader {
+  padding: 20px;
+  background: #6d7fcc;
+}
+
+input.navMenuInput {
+  display: none;
+}
+
+ul.collapsible {
+  max-height: 0;
+  overflow: hidden;
+  list-style-type: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+.sidebar ul {
+  list-style-type: none;
+}
+
+input.navMenuInput:checked ~ ul.collapsible {
+  max-height: initial;
+}
+ul.components {
+  padding: 20px 0;
+  border-bottom: 1px solid #6d7fcc;
+}
+
+ul.navmenu p {
+  color: #fff;
+  padding: 10px;
+}
+
+.navmenuitem {
+  font-size: 1.1em;
+  display: block;
+}
+
+.navmenuitem {
+  width: 100%;
+  cursor: pointer;
+}
+
+.navmenuitem:hover {
+  color: #7386d5;
+  background: #fff;
+}
+
+li.active > .navmenuitem,
+input.navMenuInput:checked ~ .navmenuitem {
+  color: #ff9;
+  background: #6d7fcc;
+}
+li.active > .navmenuitem:hover,
+input.navMenuInput:checked ~ .navmenuitem:hover {
+  color: #7386d5;
+  background: #fff;
+}
+
+ul.collapsible label:first-child::after {
+  content: "*";
+  display: block;
+  position: absolute;
+  right: 20px;
+  font-size: 0.6em;
+}
+
+input.navMenuInput:checked ~ .ulcollapsible::before {
+  content: "\e260";
+}
+
+.sidebar ul ul a {
+  font-size: 0.9em !important;
+  padding-left: 30px !important;
+  background: #6d7fcc;
+}
+
+ul.CTAs {
+  padding: 20px;
+}
+
+ul.CTAs a {
+  text-align: center;
+  font-size: 0.9em !important;
+  display: block;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+a.download {
+  background: #fff;
+  color: #7386d5;
+}
+
+a.article,
+a.article:hover {
+  background: #6d7fcc !important;
+  color: #fff !important;
+}
+.inputBox {
+}
+.inputBox:focus + .isOpen {
+  color: red;
+}
+.titlebar {
+  display: flex;
+  justify-content: center;
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    left: -250px;
+    position: fixed;
+    z-index: 10;
+  }
+  .sidebar.active {
+    left: 0;
+    z-index: 10;
+  }
+  .sidebarCollapse span {
+    display: none;
+  }
+}
+@media (min-width: 769px) {
+  .topnav {
+    display: none;
+  }
+}

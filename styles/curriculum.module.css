@@ -1,0 +1,20 @@
+table.curriculum tr:nth-child(even) {
+  background-color: #eeeeee;
+}
+table.curriculum tr.title {
+  background-color: #ffffff;
+  font-weight: bold;
+}
+
+table.curriculum td.basic {
+  background-color: DarkGreen;
+}
+table.curriculum td.intermed {
+  background-color: Orange;
+}
+table.curriculum td.higher {
+  background-color: OrangeRed;
+}
+table.curriculum td.adv {
+  background-color: Red;
+}
